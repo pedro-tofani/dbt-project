@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: data_lake_raw
+    schema: public
+    loader: postgres
+
+    tables:
+      - name: web_events
+        identifier: web_events
+        description: 'web_events'
+        columns:
+          - name: event_id
+            tests:
+              - not_null
+          - name: event_timestamp
+            tests:
+              - not_null
