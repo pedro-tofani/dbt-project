@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres-dbt:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: admin1234
+      POSTGRES_USER : admin
+      POSTGRES_DB : myDb
+      DBT_SCHEMA: dbt
+      DBT_RAW_DATA_SCHEMA: dbt_raw_data
+    ports:
+      - "5433:5432"
+    restart: always
+
