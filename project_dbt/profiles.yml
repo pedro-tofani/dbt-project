@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres-dbt
+      user: admin
+      pass: admin1234
+      port: 5433
+      dbname: myDb
+      schema: public
+      threads: 4
